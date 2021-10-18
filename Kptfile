@@ -1,0 +1,18 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: simplewebapp
+upstream:
+  type: git
+  git:
+    repo: https://github.com/chrisricci/simplewebapp
+    directory: /
+    ref: master
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/chrisricci/simplewebapp
+    directory: /
+    ref: master
+    commit: e9ef2abb3942f7122ebdd5384d161b9cf1687e00
